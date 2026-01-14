@@ -17,5 +17,4 @@ This folder contains the Stata code to reproduce the tables and appendix results
 ## Notes
 - To suppress regression output, set: `local detail = 1`.
 - The script saves a processed temporary dataset (`tempfile full`) used across sections.
-- The script currently stops after creating the tempfile (`stop`); remove/comment out that line to run the full replication end-to-end.
-- One figure export path is user-specific; update the `graph export` path if you want to reproduce the saved figure output.
+
