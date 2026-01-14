@@ -44,7 +44,6 @@ gen femXfac_fem = female_r*fac_fem  // female X female faculty
 tempfile full
 save `full'
 
-stop 
 * ===================================================================== *
 * -----------------     	 Academic outcomes        ----------------- *
 * ===================================================================== *
@@ -281,8 +280,6 @@ coefplot ///
     xscale(range(-0.15 0.50)) xlabel(-0.15(0.1)0.50,  angle(0)) ///
     order("Course grades" "Test scores") ///
     ylabel(, angle(0) ) xtitle("")
-
-graph export "/Users/mriduljoshi/Dropbox/Apps/Overleaf/Gender interactions Science with model/exhibits/fig_fxbelong.pdf", as(pdf) replace
 
 * ===================================================================== *
 * -----------------     	 Student beliefs          ----------------- *
