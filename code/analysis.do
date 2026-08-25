@@ -522,7 +522,7 @@ eststo t12: `qui' reghdfe std_g3 female_r fac_female femXfac_female age_imp rese
 	a(department_id sub) vce(clus stdid)
 
 
-esttab t1*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01)
+esttab t1*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001)
 
 
 
@@ -602,7 +602,7 @@ eststo t32: `qui' reghdfe std_e_conf_stack female_r fac_female femXfac_female ag
 	std_b_conf_stack b_conf_miss , a(department_id subject) vce(clus stdid)
 
 
-esttab t31 t32, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01)
+esttab t31 t32, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001)
 
 
 * ===================================================================== *
@@ -634,7 +634,7 @@ eststo t28: `qui' reghdfe std_coursegrade femXfac_fem if low_anxiety==0 , a(clas
 
 
 
-esttab t2*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01)
+esttab t2*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001)
 
 
 * ===================================================================== *
@@ -665,7 +665,7 @@ eststo s128: `qui' reghdfe std_g3 female_r fac_female femXfac_female age_imp res
 
 
 
-esttab s12*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01)
+esttab s12*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001)
 
 
 
@@ -734,7 +734,7 @@ estadd scalar Fmean = `r(mean)'
 
 
 
-esttab t41, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01) ///
+esttab t41, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001) ///
 	scalar(Fmean Mmean efull sefull cilfull ciufull pfull)  sfmt(%9.3f %9.3f %9.3f %9.3f %9.2f)
 
 
@@ -799,7 +799,7 @@ foreach char in `chars' {
 } 
 
 
-esttab s1*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01) scalar(Fmean Mmean)
+esttab s1*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001) scalar(Fmean Mmean)
 
 restore
 
@@ -821,7 +821,7 @@ foreach char in `chars' {
 } 
 
 
-esttab s2?, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01)
+esttab s2?, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001)
 
 
 
@@ -831,7 +831,7 @@ estadd scalar pF = Ftail(e(df_m), e(df_r), e(F))
 
 
 
-esttab s2F, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01) scalar(F pF) 
+esttab s2F, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001) scalar(F pF)
 
 
 
@@ -870,7 +870,7 @@ foreach char in `chars' {
 } 
 
 
-esttab s2b?, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01) scalar(Fmean Mmean)  sfmt(%9.3f %9.3f)
+esttab s2b?, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001) scalar(Fmean Mmean)  sfmt(%9.3f %9.3f)
 
 
 * ===================================================================== *
@@ -901,7 +901,7 @@ estadd scalar cilfull  = `r(lb)'
 estadd scalar pfull = `r(p)'
 
 
-esttab s32*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01) ///
+esttab s32*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001) ///
 	scalar(efull sefull cilfull ciufull pfull)  sfmt(%9.3f %9.3f %9.3f %9.3f %9.2f)
 
 
@@ -927,7 +927,7 @@ eststo s314: `qui' reghdfe std_coursegrade femXfac_fem if notstem==0, a(stdid co
 
 
 
-esttab s31*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01)
+esttab s31*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001)
 
 
 * ===================================================================== *
@@ -970,7 +970,7 @@ eststo s42: `qui' reghdfe e_ask_ques female_r fac_female femXfac_female age_imp 
 estadd scalar Dmean = `r(mean)'
 
 
-esttab s4?, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01) scalar(Dmean) 
+esttab s4?, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001) scalar(Dmean)
 
 
 
@@ -1053,7 +1053,7 @@ eststo s73: `qui' reghdfe e_office female_r fac_female femXfac_female age_imp re
 estadd scalar Dmean = `r(mean)'	
 
 
-esttab s71 s72 s73, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01)  scalar(Dmean)
+esttab s71 s72 s73, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001)  scalar(Dmean)
 
 
 eststo s74: `qui' reghdfe e_call female_r fac_female femXfac_female age_imp reservation_stu_imp father_college_imp ///
@@ -1085,7 +1085,7 @@ eststo s76: `qui' reghdfe e_office female_r fac_female femXfac_female age_imp re
 estadd scalar Dmean = `r(mean)'	
 
 
-esttab s74 s75 s76, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01)  scalar(Dmean)
+esttab s74 s75 s76, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001)  scalar(Dmean)
 
 
 * ===================================================================== *
@@ -1110,7 +1110,7 @@ foreach w in `r(varlist)' {
 	loc i = `i' + 1
 } 
 
-esttab s61*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01) scalar(Dmean)
+esttab s61*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001) scalar(Dmean)
 
 
 loc i = 1
@@ -1124,7 +1124,7 @@ foreach t in inclass assignment feedback collab {
 	loc i = `i' + 1	
 }
 
-esttab s62*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01) scalar(Dmean)
+esttab s62*, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001) scalar(Dmean)
 
 
 * ===================================================================== *
@@ -1172,7 +1172,7 @@ eststo s53: `qui' reghdfe std_coursegrade femXfemaleeq femXfemalest, a(stdid cla
 estadd scalar Fmean = `Sfstereo_maj'
 estadd scalar Mmean = `Smstereo_maj'
 
-esttab s51 s52 s53, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01) scalar(Fmean Mmean)
+esttab s51 s52 s53, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001) scalar(Fmean Mmean)
 
 
 
@@ -1211,7 +1211,7 @@ estadd scalar Fmean = `Sffixed_mindsetl'
 estadd scalar Mmean = `Smfixed_mindsetl'
 
 
-esttab s54 s55, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01)  scalar(Fmean Mmean)
+esttab s54 s55, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001)  scalar(Fmean Mmean)
 
 
 
@@ -1250,7 +1250,7 @@ estadd scalar Fmean = `Sfassoabv'
 estadd scalar Mmean = `Smassoabv'
 
 
-esttab s54 s55, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.1 ** 0.05 *** 0.01)  scalar(Fmean Mmean)
+esttab s54 s55, cells(b(star fmt(%9.3f)) se(par fmt(%9.3f)) ci(fmt(%9.3f) par) p(fmt(%9.2f)) ) starlevels(* 0.05 ** 0.01 *** 0.001)  scalar(Fmean Mmean)
 
 
 
